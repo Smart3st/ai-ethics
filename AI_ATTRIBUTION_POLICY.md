@@ -2,7 +2,7 @@
 
 **Version:** 1.0
 **Effective Date:** October 27, 2025
-**Repository:** FutureTranz-Inc/ai-dev-tasks
+**Repository:** FutureTranz-Inc/ai-ethics
 
 **Credits:** [FutureTranz-Inc](https://github.com/FutureTranz-Inc) | [victorjquinones](https://github.com/victorjquinones)
 
@@ -28,7 +28,7 @@ This repository PROHIBITS the inclusion of AI attribution in:
 
 1. **Copyright and Authorship**: Copyright authorship and legal accountability attach to natural persons. Attribution in this repository must identify human contributors.
 2. **Attribution Integrity**: Labeling an AI tool as a co-author creates inaccurate authorship metadata and weakens the integrity of project history.
-3. **Open Source Compliance**: Original human contributors (snarktank/ai-dev-tasks and others) must remain accurately credited.
+3. **Open Source Compliance**: Original human contributors (snarktank/ai-ethics and others) must remain accurately credited.
 
 ### Ethical Obligations
 
@@ -38,12 +38,7 @@ This repository PROHIBITS the inclusion of AI attribution in:
 
 ### Original Authors to Honor
 
-This project is built on [snarktank/ai-dev-tasks](https://github.com/snarktank/ai-dev-tasks) created by:
-
-- Ryan Carson (snarktank)
-- 14+ human contributors
-
-Enhanced by:
+This project is built by:
 
 - FutureTranz (Victor J. Quiñones)
 
@@ -84,7 +79,7 @@ The following MUST always be preserved:
 Co-Authored-By: [Human Name] <human@email.com>
 Signed-off-by: [Human Name] <human@email.com>
 
-Based on: snarktank/ai-dev-tasks
+Based on: snarktank/ai-ethics
 Original Author: Ryan Carson
 Prepared by: Victor J. Quiñones (FutureTranz)
 ```
@@ -124,19 +119,19 @@ All pull requests are reviewed for:
 
 ## Implementation
 
-### For ai-dev-tasks Repository
+### For ai-ethics Repository
 
 1. **Remove AI attribution from all existing commits** (history cleanup)
 2. **Install enforcement hooks** (prevent future violations)
 3. **Update commit templates** (remove AI co-author defaults)
 4. **CI checks** (block merges with AI attribution)
 
-### For Client Projects Using ai-dev-tasks
+### For Client Projects Using ai-ethics
 
 This policy is **installable** via:
 
 ```bash
-bash ai-dev-tasks/scripts/install-attribution-policy.sh
+bash ai-ethics/scripts/install-attribution-policy.sh
 ```
 
 This installs:
@@ -281,28 +276,8 @@ A: They are properly credited in README.md and git history. This policy protects
 
 ### Original Work
 
-This project is a derivative work of:
-
-- **Original Repository**: [snarktank/ai-dev-tasks](https://github.com/snarktank/ai-dev-tasks)
-- **Original Author**: Ryan Carson
-- **License**: MIT License (human authorship required)
-
-### Enhanced By
-
 - **FutureTranz Development Team**
 - **Victor J. Quiñones** - Lead Developer
-- **Repository**: [FutureTranz-Inc/ai-dev-tasks](https://github.com/FutureTranz-Inc/ai-dev-tasks)
-
----
-
-## Contact
-
-For questions about this policy:
-
-- **Repository**: [FutureTranz-Inc/ai-dev-tasks](https://github.com/FutureTranz-Inc/ai-dev-tasks/issues)
-- **Maintainer**: Victor J. Quiñones (FutureTranz)
-
----
 
 **Policy Prepared by:** Victor J. Quiñones (FutureTranz)
 **Last Updated:** October 27, 2025

@@ -9,7 +9,7 @@
 #
 # Usage:
 #   cd your-project
-#   bash ai-dev-tasks/scripts/install-attribution-policy.sh
+#   bash ai-ethics/scripts/install-attribution-policy.sh
 #
 
 set -e
@@ -50,11 +50,11 @@ if [ "$CURRENT_DIR" != "$GIT_ROOT" ]; then
     echo ""
 fi
 
-# Check if ai-dev-tasks exists
-if [ ! -d "ai-dev-tasks" ]; then
-    echo -e "${RED}❌ Error: ai-dev-tasks submodule not found${NC}"
-    echo "Please add ai-dev-tasks as a submodule first:"
-    echo "  git submodule add https://github.com/FutureTranz-Inc/ai-dev-tasks.git"
+# Check if ai-ethics exists
+if [ ! -d "ai-ethics" ]; then
+    echo -e "${RED}❌ Error: ai-ethics submodule not found${NC}"
+    echo "Please add ai-ethics as a submodule first:"
+    echo "  git submodule add https://github.com/FutureTranz-Inc/ai-ethics.git"
     exit 1
 fi
 
@@ -74,7 +74,7 @@ if [ -f ".git/hooks/commit-msg" ]; then
     cp .git/hooks/commit-msg .git/hooks/commit-msg.backup
 fi
 
-cp ai-dev-tasks/scripts/hooks/commit-msg .git/hooks/commit-msg
+cp ai-ethics/scripts/hooks/commit-msg .git/hooks/commit-msg
 chmod +x .git/hooks/commit-msg
 echo -e "${GREEN}✅ Installed: commit-msg hook (blocks AI attribution)${NC}"
 INSTALLED_COUNT=$((INSTALLED_COUNT + 1))
@@ -86,7 +86,7 @@ if [ -f ".git/hooks/pre-commit" ]; then
     cp .git/hooks/pre-commit .git/hooks/pre-commit.backup
 fi
 
-cp ai-dev-tasks/scripts/hooks/pre-commit .git/hooks/pre-commit
+cp ai-ethics/scripts/hooks/pre-commit .git/hooks/pre-commit
 chmod +x .git/hooks/pre-commit
 echo -e "${GREEN}✅ Installed: pre-commit hook (strips AI attribution)${NC}"
 INSTALLED_COUNT=$((INSTALLED_COUNT + 1))
@@ -100,7 +100,7 @@ if [ -f "scripts/ci-check-attribution.sh" ]; then
     echo -e "${YELLOW}⚠️  scripts/ci-check-attribution.sh already exists (skipping)${NC}"
     SKIPPED_COUNT=$((SKIPPED_COUNT + 1))
 else
-    cp ai-dev-tasks/scripts/ci-check-attribution.sh scripts/ci-check-attribution.sh
+    cp ai-ethics/scripts/ci-check-attribution.sh scripts/ci-check-attribution.sh
     chmod +x scripts/ci-check-attribution.sh
     echo -e "${GREEN}✅ Installed: CI attribution check script${NC}"
     INSTALLED_COUNT=$((INSTALLED_COUNT + 1))
@@ -115,7 +115,7 @@ if [ -f ".github/workflows/attribution-policy.yml" ]; then
     echo -e "${YELLOW}⚠️  .github/workflows/attribution-policy.yml already exists (skipping)${NC}"
     SKIPPED_COUNT=$((SKIPPED_COUNT + 1))
 else
-    cp ai-dev-tasks/.github/workflows/attribution-policy.yml .github/workflows/attribution-policy.yml
+    cp ai-ethics/.github/workflows/attribution-policy.yml .github/workflows/attribution-policy.yml
     echo -e "${GREEN}✅ Installed: GitHub Actions workflow${NC}"
     INSTALLED_COUNT=$((INSTALLED_COUNT + 1))
 fi
@@ -125,7 +125,7 @@ if [ -f "AI_ATTRIBUTION_POLICY.md" ]; then
     echo -e "${YELLOW}⚠️  AI_ATTRIBUTION_POLICY.md already exists (skipping)${NC}"
     SKIPPED_COUNT=$((SKIPPED_COUNT + 1))
 else
-    cp ai-dev-tasks/AI_ATTRIBUTION_POLICY.md AI_ATTRIBUTION_POLICY.md
+    cp ai-ethics/AI_ATTRIBUTION_POLICY.md AI_ATTRIBUTION_POLICY.md
     echo -e "${GREEN}✅ Installed: AI Attribution Policy document${NC}"
     INSTALLED_COUNT=$((INSTALLED_COUNT + 1))
 fi
@@ -180,7 +180,7 @@ if [ "$VERIFICATION_PASSED" = true ]; then
     echo "🧪 Test the Policy:"
     echo ""
     echo "🧹 Clean Existing History (optional):"
-    echo "   bash ai-dev-tasks/scripts/clean-ai-attribution-history.sh"
+    echo "   bash ai-ethics/scripts/clean-ai-attribution-history.sh"
     echo ""
     echo "✅ Your project now enforces human-only authorship attribution!"
     echo ""

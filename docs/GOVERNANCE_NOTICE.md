@@ -8,7 +8,7 @@
 
 The AI Ethics Policy, GitHub↔Notion Synchronization Policy, and related governance documents in this repository apply to:
 
-- `FutureTranz-Inc/ai-dev-tasks` (upstream)
+- `FutureTranz-Inc/ai-ethics` (upstream)
 - Contributions submitted to upstream via pull request
 
 ---
